@@ -34,4 +34,6 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       # run tests!
-      - run: phpunit
+      - run: |
+          curl -fsSL https://get.docksal.io | sh
+          fin init
